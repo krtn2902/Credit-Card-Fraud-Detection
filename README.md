@@ -4,21 +4,18 @@ This project aims to build a machine learning model to detect fraudulent credit 
 
 ## Project Structure
 
-
-├── data/
-│ ├── creditcard.csv # Raw dataset
-│ └── processed_data.csv # Processed data after preprocessing
-├── models/
-│ └── random_forest_model.pkl # Saved trained Random Forest model
-├── notebooks/
-│ ├── 01_data_preprocessing.ipynb # Jupyter notebook for data loading, exploration, and preprocessing
-│ └── 02_model_training.ipynb # Jupyter notebook for model training, evaluation, and saving
-├── outputs/
-│ ├── evaluation_report.txt # Text file containing classification report and confusion matrix
-│ └── roc_curve.png # Image file of the ROC curve for the model
-├── requirements.txt # Python dependencies (may need to be populated)
-└── README.md # This file
-
+```
+Directory structure:
+    ├── README.md
+    ├── requirements.txt
+    ├── models/
+    │   └── random_forest_model.pkl
+    ├── notebooks/
+    │   ├── 01_data_preprocessing.ipynb
+    │   └── 02_model_training.ipynb
+    └── outputs/
+        └── evaluation_report.txt
+```
 ## Workflow
 
 1.  **Data Preprocessing (`notebooks/01_data_preprocessing.ipynb`):**
@@ -46,17 +43,23 @@ This project aims to build a machine learning model to detect fraudulent credit 
     cd <repository-directory>
     ```
 2.  **Create a virtual environment (recommended):**
-    ```bash
+   * Linux/MacOS
+   ```bash
     python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-3.  **Install dependencies:**
+    source venv/bin/activate
+   ```
+   * Windows
+   ```bash
+    python -m venv venv
+    venv\Scripts\activate
+   ```
+4.  **Install dependencies:**
     *   Ensure the `requirements.txt` file lists all necessary packages. Based on the notebooks, you'll likely need: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`.
     *   Install using pip:
         ```bash
         pip install -r requirements.txt
         ```
-4.  **Add Data:**
+5.  **Add Data:**
     *   Place the raw dataset file (`creditcard.csv`) into the `data/` directory. (Note: This dataset is often found on Kaggle).
 
 ## How to Run
